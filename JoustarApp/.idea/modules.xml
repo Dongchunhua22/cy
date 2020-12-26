@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Joustar/Joustar.iml" filepath="$PROJECT_DIR$/Joustar/Joustar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JoustarApp.iml" filepath="$PROJECT_DIR$/JoustarApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Joustar/JoustarApp-Joustar.iml" filepath="$PROJECT_DIR$/Joustar/JoustarApp-Joustar.iml" group="JoustarApp/Joustar" />
+      <module fileurl="file://$PROJECT_DIR$/app/JoustarApp-app.iml" filepath="$PROJECT_DIR$/app/JoustarApp-app.iml" group="JoustarApp/app" />
+      <module fileurl="file://$PROJECT_DIR$/imagepicker/JoustarApp-imagepicker.iml" filepath="$PROJECT_DIR$/imagepicker/JoustarApp-imagepicker.iml" group="JoustarApp/imagepicker" />
+      <module fileurl="file://$PROJECT_DIR$/jcvideoplayer-lib/JoustarApp-jcvideoplayer-lib.iml" filepath="$PROJECT_DIR$/jcvideoplayer-lib/JoustarApp-jcvideoplayer-lib.iml" group="JoustarApp/jcvideoplayer-lib" />
+      <module fileurl="file://$PROJECT_DIR$/lib_commonpulltorefresh/JoustarApp-lib_commonpulltorefresh.iml" filepath="$PROJECT_DIR$/lib_commonpulltorefresh/JoustarApp-lib_commonpulltorefresh.iml" group="JoustarApp/lib_commonpulltorefresh" />
+      <module fileurl="file://$PROJECT_DIR$/libzxing/JoustarApp-libzxing.iml" filepath="$PROJECT_DIR$/libzxing/JoustarApp-libzxing.iml" group="JoustarApp/libzxing" />
+      <module fileurl="file://$PROJECT_DIR$/uikit/JoustarApp-uikit.iml" filepath="$PROJECT_DIR$/uikit/JoustarApp-uikit.iml" group="JoustarApp/uikit" />
+      <module fileurl="file://$PROJECT_DIR$/xrecyclerview/JoustarApp-xrecyclerview.iml" filepath="$PROJECT_DIR$/xrecyclerview/JoustarApp-xrecyclerview.iml" group="JoustarApp/xrecyclerview" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagepicker/imagepicker.iml" filepath="$PROJECT_DIR$/imagepicker/imagepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcvideoplayer-lib/jcvideoplayer-lib.iml" filepath="$PROJECT_DIR$/jcvideoplayer-lib/jcvideoplayer-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_commonpulltorefresh/lib_commonpulltorefresh.iml" filepath="$PROJECT_DIR$/lib_commonpulltorefresh/lib_commonpulltorefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libzxing/libzxing.iml" filepath="$PROJECT_DIR$/libzxing/libzxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/live-JoustarApp.iml" filepath="$PROJECT_DIR$/live-JoustarApp.iml" group="JoustarApp" />
+      <module fileurl="file://$PROJECT_DIR$/uikit/uikit.iml" filepath="$PROJECT_DIR$/uikit/uikit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" filepath="$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" />
+    </modules>
+  </component>
+</project>

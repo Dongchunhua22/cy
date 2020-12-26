@@ -1,0 +1,2 @@
+include ':Joustar', ':lib_commonpulltorefresh', ':app', ':xrecyclerview', ':uikit', ':jcvideoplayer-lib', ':libzxing', ':imagepicker'
+

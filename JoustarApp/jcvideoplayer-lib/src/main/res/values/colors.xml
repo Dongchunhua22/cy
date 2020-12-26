@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--透明色-->
+    <color name="transport">#00000000</color>
+    <!--半透明-->
+    <color name="colorsss">#e0000000</color>
+    <!--透明黑色-->
+    <color name="black_touming_color">#cc000000</color>
+</resources>

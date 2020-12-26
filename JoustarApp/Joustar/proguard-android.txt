@@ -1,0 +1,171 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+-dontpreverify
+-verbose
+-printmapping proguardMapping.txt
+-optimizations !code/simplification/cast,!field/*,!class/merging/*
+-keepattributes *Annotation*,InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+ #优化  不优化输入的类文件
+-dontoptimize
+
+
+# 保持哪些类不被混淆
+-keep public class * extends android.app.Fragment
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+#如果有引用v4包可以添加下面这行
+-keep public class * extends android.support.v4.app.Fragment
+
+
+##忽略警告
+#-ignorewarning
+
+
+-dontwarn com.umeng.analytics.**
+-keep class com.umeng.analytics.** {*;}
+
+-dontwarn u.aly.**
+-keep class u.aly.** {*;}
+
+-keep public class * implements java.io.Serializable{
+    public *;
+}
+
+
+-dontwarn com.alibaba.fastjson.**
+-keep class com.alibaba.fastjson.** { *; }
+-keepclassmembers class * {
+public <methods>;
+}
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+    public <fields>;
+}
+
+#极光推送
+-dontoptimize
+-dontpreverify
+
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+
+#-----------------------gson混淆开始-----------------------
+-dontwarn com.google.**
+-keep class com.google.gson.** {*;}
+#=======================gson混淆结束=======================
+
+#-----------------------protobuf混淆开始-----------------------
+-dontwarn com.google.**
+-keep class com.google.protobuf.** {*;}
+#=======================protobuf混淆结束=======================
+
+
+#-----------------------Talkingdata统计混淆开始-----------------------
+-keep class com.tendcloud.** {*;}
+-keep public class com.tendcloud.tenddata.** { public protected *;}
+-keepclassmembers class com.tendcloud.tenddata.**{
+public void *(***);
+}
+-keep class com.talkingdata.sdk.TalkingDataSDK {public *;}
+-keep class com.apptalkingdata.** {*;}
+#=======================Talkingdata统计混淆结束=======================
+
+#-----------------------Umeng统计混淆开始-----------------------
+-dontshrink
+-dontoptimize
+-dontwarn com.google.android.maps.**
+-dontwarn android.webkit.WebView
+-dontwarn com.umeng.**
+-dontwarn com.tencent.weibo.sdk.**
+-dontwarn com.facebook.**
+
+
+-keep enum com.facebook.**
+-keepattributes Exceptions,InnerClasses,Signature
+-keepattributes *Annotation*
+-keepattributes SourceFile,LineNumberTable
+
+-keep public interface com.facebook.**
+-keep public interface com.tencent.**
+-keep public interface com.umeng.socialize.**
+-keep public interface com.umeng.socialize.sensor.**
+-keep public interface com.umeng.scrshot.**
+
+-keep public class com.umeng.socialize.* {*;}
+-keep public class javax.**
+-keep public class android.webkit.**
+
+-keep class com.facebook.**
+-keep class com.umeng.scrshot.**
+-keep public class com.tencent.** {*;}
+-keep class com.umeng.socialize.sensor.**
+
+-keep class com.tencent.mm.sdk.modelmsg.WXMediaMessage {*;}
+
+-keep class com.tencent.mm.sdk.modelmsg.** implements com.tencent.mm.sdk.modelmsg.WXMediaMessage$IMediaObject {*;}
+
+-keep class im.yixin.sdk.api.YXMessage {*;}
+-keep class im.yixin.sdk.api.** implements im.yixin.sdk.api.YXMessage$YXMessageData{*;}
+
+-keep public class [your_pkg].R$*{
+    public static final int *;
+}
+#=======================Umeng统计混淆结束=======================
+
+#=======================云信混淆========================
+-dontwarn com.netease.**
+-dontwarn io.netty.**
+-keep class com.netease.** {*;}
+#如果 netty 使用的官方版本，它中间用到了反射，因此需要 keep。如果使用的是我们提供的版本，则不需要 keep
+-keep class io.netty.** {*;}
+#======================================================
+
+#==============BaseRecyclerViewAdapterHelper===========
+-keep class com.chad.library.adapter.** {
+   *;
+}
+#======================================================
+
+#=======================支付宝混淆开始=======================
+-keep class com.alipay.android.app.IAlixPay{*;}
+-keep class com.alipay.android.app.IAlixPay$Stub{*;}
+-keep class com.alipay.android.app.IRemoteServiceCallback{*;}
+-keep class com.alipay.android.app.IRemoteServiceCallback$Stub{*;}
+-keep class com.alipay.sdk.app.PayTask{ public *;}
+-keep class com.alipay.sdk.app.AuthTask{ public *;}
+-keep class com.alipay.sdk.app.H5PayCallback {
+    <fields>;
+    <methods>;
+}
+-keep class com.alipay.android.phone.mrpc.core.** { *; }
+-keep class com.alipay.apmobilesecuritysdk.** { *; }
+-keep class com.alipay.mobile.framework.service.annotation.** { *; }
+-keep class com.alipay.mobilesecuritysdk.face.** { *; }
+-keep class com.alipay.tscenter.biz.rpc.** { *; }
+-keep class org.json.alipay.** { *; }
+-keep class com.alipay.tscenter.** { *; }
+-keep class com.ta.utdid2.** { *;}
+-keep class com.ut.device.** { *;}
+
+#=======================支付宝混淆结束=======================
+
+#=======================阿里云图片上传混淆====================
+-keep class com.alibaba.sdk.android.oss.** { *; }
+-dontwarn okio.**
+-dontwarn org.apache.commons.codec.binary.**
+#===========================================================
